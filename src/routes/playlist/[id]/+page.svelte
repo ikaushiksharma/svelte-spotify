@@ -83,7 +83,6 @@
 					};
 				}}
 			>
-				Expand Down
 				<Button
 					bind:this={followButton}
 					element="button"
