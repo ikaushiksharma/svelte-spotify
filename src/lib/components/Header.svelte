@@ -2,8 +2,8 @@
 	import { browser } from '$app/environment';
 	import { LogoutButton, Navigation } from '$components';
 	import { page } from '$app/stores';
-	import { ChevronDown,ExternalLink } from 'lucide-svelte';
-	import {tippy} from '$actions'
+	import { ChevronDown, ExternalLink } from 'lucide-svelte';
+	import { tippy } from '$actions';
 	$: user = $page.data.user;
 </script>
 
@@ -28,9 +28,11 @@
 					trigger: 'click',
 					placement: 'bottom-end',
 					interactive: true,
-					theme: 'menu'
+					theme: 'menu',
+					hideOnPopperBlur: true
 				}}
-			>				{#if user?.images && user.images.length > 0}
+			>
+				{#if user?.images && user.images.length > 0}
 					<img src={user.images[0].url} alt="user image" />
 				{/if}
 				{user?.display_name} <span class="visually-hidden">Profile menu</span>
