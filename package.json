@@ -40,12 +40,14 @@
 		"@fontsource/metropolis": "^5.0.4",
 		"@types/sharp": "^0.32.0",
 		"@types/spotify-api": "^0.0.22",
+		"@types/uniqid": "^5.3.2",
 		"@unsass/breakpoint": "^2.3.0",
 		"lucide-svelte": "^0.258.0",
 		"modern-normalize": "^2.0.0",
 		"nprogress": "^0.2.0",
 		"pkce-gen": "^1.1.0",
 		"sharp": "^0.32.1",
-		"tippy.js": "^6.3.7"
+		"tippy.js": "^6.3.7",
+		"uniqid": "^5.4.0"
 	}
 }

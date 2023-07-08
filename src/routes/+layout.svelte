@@ -2,12 +2,13 @@
 	import 'modern-normalize/modern-normalize.css';
 	import '../styles/main.scss';
 	import type { LayoutData } from './$types';
-	import { Navigation, Header } from '$components';
+	import { Navigation, Header, Toasts } from '$components';
 	import { page } from '$app/stores';
 	import NProgress from 'nprogress';
 	import { hideAll } from 'tippy.js';
 	import 'nprogress/nprogress.css';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
+	import { toasts } from '$stores';
 	NProgress.configure({ showSpinner: false });
 	let topbar: HTMLElement;
 	let scrollY: number;
@@ -35,7 +36,7 @@
 {#if user}
 	<a href="#main-content" class="skip-link">Skip to Content</a>
 {/if}
-
+<Toasts />
 <div id="main">
 	{#if user}
 		<div id="sidebar">
