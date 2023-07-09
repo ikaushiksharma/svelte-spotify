@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { applyAction, enhance } from '$app/forms';
-	import { invalidate } from '$app/navigation';
+	import { invalidateAll } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { Button, ItemPage, Modal } from '$components';
 	import PlaylistForm from '$components/PlaylistForm.svelte';
@@ -89,6 +89,7 @@
 							await applyAction(result);
 						}
 						followButton.focus();
+						invalidateAll();
 					};
 				}}
 			>
@@ -110,7 +111,11 @@
 		{/if}
 	</div>
 	{#if playlist.tracks.items.length > 0}
-		<TrackList tracks={filteredTracks} />
+		<TrackList
+			tracks={filteredTracks}
+			isOwner={data.user?.id === playlist.owner.id}
+			userPlaylists={data.userAllPlaylists?.filter((pl) => pl.owner.id === data.user?.id)}
+		/>
 		{#if tracks.next}
 			<div class="load-more">
 				<Button element="button" variant="outline" disabled={isLoading} on:click={loadMoreTracks}
@@ -158,7 +163,7 @@
 		form={form && 'editForm' in form ? form : null}
 		on:success={() => {
 			MicroModal.close('edit-playlist-modal');
-			invalidate(`/api/spotify/playlists/${playlist.id}`);
+			invalidateAll();
 		}}
 	/>
 </Modal>
