@@ -1,4 +1,7 @@
-# create-svelte
+# Spotify Clone
+ ### This is a Github repository for a Svelte web application that allows users to search for and play songs on Spotify. The application uses the Spotify API to fetch data and display it on the user interface. The code is written in Typescript and uses Svelte framework for building the UI components. The repository contains all the necessary files to run the application locally.
+
+
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
@@ -34,5 +37,3 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
