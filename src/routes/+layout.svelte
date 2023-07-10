@@ -79,8 +79,35 @@
 		</main>
 	</div>
 </div>
+<div class="footer">
+	<p>
+		Made With 🍵 By <a
+			href="http://github.com/ikaushiksharma"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			Kaushik Sharma</a
+		>
+	</p>
+</div>
 
 <style lang="scss">
+	.footer {
+		text-align: center;
+		padding: 20px;
+		font-size: 0.8rem;
+		a {
+			cursor: pointer;
+			font-weight: bolder;
+			text-decoration: none;
+			color: var(--text-color);
+			transition: all 0.2s ease-in-out;
+			&:hover {
+				text-underline-offset: 5px;
+				color: var(--accent-color);
+			}
+		}
+	}
 	#main {
 		display: flex;
 		:global(html.no-js) & {
