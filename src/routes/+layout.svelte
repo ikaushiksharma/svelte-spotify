@@ -77,18 +77,18 @@
 			{/if}
 			<slot />
 		</main>
+		<div class="footer">
+			<p>
+				Made With 🍵 By <a
+					href="http://github.com/ikaushiksharma"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Kaushik Sharma</a
+				>
+			</p>
+		</div>
 	</div>
-</div>
-<div class="footer">
-	<p>
-		Made With 🍵 By <a
-			href="http://github.com/ikaushiksharma"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
-			Kaushik Sharma</a
-		>
-	</p>
 </div>
 
 <style lang="scss">
